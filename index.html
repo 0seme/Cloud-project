@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joyce - Cloud Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .fade-in {
+        animation: fadeIn 2s ease-in-out;
+      }
+      .slide-in {
+        animation: slideIn 1.5s ease-in-out;
+      }
+      .fade-in-up {
+        animation: fadeInUp 2s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes slideIn {
+        from { transform: translateX(-100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      @keyframes fadeInUp {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-white font-sans transition-colors duration-300">
+
+    <!-- Hero Section -->
+    <header class="bg-[#007ba7] text-white py-20">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="bg-white text-[#007ba7] rounded-2xl shadow-xl p-10 fade-in text-center dark:bg-gray-800 dark:text-white">
+          <h1 class="text-5xl font-bold mb-2">Joyce Oseme Ebea</h1>
+          <p class="text-xl font-medium text-gray-700 dark:text-gray-300">DevOps/Cloud Engineer</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">AltSchool ID: ALT/SOE/024/5416</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Project Title -->
+      <section class="py-16 px-6 bg-white dark:bg-gray-800 fade-in-up">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl font-bold text-[#007ba7] mb-4">The Future of Family Health: CareLink</h2>
+          <p class="text-lg text-gray-700 dark:text-gray-300">
+            CareLink is an innovative health management platform that empowers families to coordinate care from anywhere. 
+            By combining real-time updates, secure communication, and centralized tools for appointments, prescriptions, and emergency alerts, 
+            CareLink transforms how families stay connected to their health needs.
+          </p>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="py-16 px-6 bg-gray-50 dark:bg-gray-800 slide-in">
+        <div class="max-w-6xl mx-auto grid sm:grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-[#007ba7] text-white rounded-xl p-6 shadow-md">
+            <h3 class="text-xl font-bold mb-2">Unified Dashboard</h3>
+            <p>Track doctor appointments, prescriptions, and health notes across all family members.</p>
+          </div>
+          <div class="bg-[#007ba7] text-white rounded-xl p-6 shadow-md">
+            <h3 class="text-xl font-bold mb-2">Smart Alerts</h3>
+            <p>Receive reminders for medication, vaccinations, and upcoming checkups.</p>
+          </div>
+          <div class="bg-[#007ba7] text-white rounded-xl p-6 shadow-md">
+            <h3 class="text-xl font-bold mb-2">Secure Data</h3>
+            <p>All data is encrypted and protected by industry-grade protocols.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Me -->
+      <section class="py-16 px-6 fade-in-up">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold text-[#007ba7] mb-6">About Me</h2>
+          <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
+            I'm Joyce, a dedicated Cloud Engineering student with a growing portfolio in cloud infrastructure and DevOps. 
+            I'm also KCNA certified, reflecting my solid foundation in Kubernetes and cloud-native tools. 
+            My goal is to build solutions that solve real problems and scale globally.
+          </p>
+          <a
+            href="mailto:ebeajoyce.work@gmail.com"
+            class="inline-block bg-[#007ba7] text-white px-6 py-3 font-semibold rounded-full shadow hover:bg-[#005f7a] transition"
+          >
+            Contact Me
+          </a>
+        </div>
+      </section>
+
+      <!-- Skills, Education, Projects -->
+      <section class="py-16 px-6 bg-gray-50 dark:bg-gray-800 slide-in">
+        <div class="max-w-6xl mx-auto grid sm:grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-[#007ba7] text-white rounded-xl p-6 shadow-md">
+            <h3 class="text-xl font-bold mb-4">Skills</h3>
+            <ul class="list-disc ml-4 text-sm space-y-1">
+              <li>Linux, Bash, Git</li>
+              <li>AWS EC2, S3, IAM</li>
+              <li>Kubernetes (KCNA Certified)</li>
+              <li>Bash-Scripting, Docker, CI/CD</li>
+              <li>HTML, CSS, JavaScript</li>
+            </ul>
+          </div>
+          <div class="bg-[#007ba7] text-white rounded-xl p-6 shadow-md">
+            <h3 class="text-xl font-bold mb-4">Education & Certs</h3>
+            <ul class="list-disc ml-4 text-sm space-y-1">
+              <li>Cloud Engineering (AltSchool Africa, 2024)</li>
+              <li>B.Tech. Microbiology - FUT Minna</li>
+              <li>KCNA - Kubernetes and Cloud Native Associate</li>
+            </ul>
+          </div>
+          <div class="bg-[#007ba7] text-white rounded-xl p-6 shadow-md">
+            <h3 class="text-xl font-bold mb-4">Past Projects</h3>
+            <ul class="list-disc ml-4 text-sm space-y-1">
+              <li>Virtual Assistant Portfolio Website</li>
+              <li>NGINX Reverse Proxy Setup on AWS</li>
+              <li>GitHub Action CI/CD Pipeline</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="py-16 px-6 fade-in-up">
+        <div class="max-w-xl mx-auto bg-[#007ba7] text-white rounded-xl p-8 shadow-lg border-l-4 border-[#004f63]">
+          <h2 class="text-2xl font-bold mb-4 flex items-center gap-2" aria-label="Contact Information">
+            <i class="fa fa-address-book"></i> Get in Touch
+          </h2>
+          <hr class="mb-4 border-white w-16" />
+          <p class="mb-3 flex items-center gap-2">
+            <i class="fa fa-envelope"></i>
+            <a href="mailto:ebeajoyce.work@gmail.com" class="underline text-white">ebeajoyce.work@gmail.com</a>
+          </p>
+          <p class="mb-3 flex items-center gap-2">
+            <i class="fa fa-phone"></i>
+            <span>+234 809 958 8354</span>
+          </p>
+          <p class="mb-3 flex items-center gap-2">
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/0seme" class="underline text-white">GitHub</a>
+          </p>
+          <p class="flex items-center gap-2">
+            <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/ebeajoyce" class="underline text-white">LinkedIn</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#007ba7] text-white text-center py-6 mt-10">
+      <p>&copy; 2025 Joyce Oseme - All rights reserved.</p>
+    </footer>
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  </body>
+</html>
