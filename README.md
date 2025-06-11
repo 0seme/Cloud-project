@@ -1,9 +1,30 @@
-# Cloud-project
+# Cloud-project  
+
 AltSchool Cloud Engineering 2nd Semester Project
 
 # CareLink – The Future of Family Health
 
 **CareLink** is an innovative health management platform that empowers families to coordinate care from anywhere. By combining real-time updates, secure communication, and centralized tools for appointments, prescriptions, and emergency alerts, CareLink transforms how families stay connected to their health needs.
+
+---
+
+## Table of Contents
+
+- [Screenshot of Page](#screenshot-of-page)
+- [Features](#features)
+- [Live Project URL](#live-project-url)
+- [Server Setup](#server-setup)
+- [Web Server Setup](#web-server-setup)
+- [Deployment](#deployment)
+- [HTTPS Setup (Let's Encrypt + DuckDNS)](#https-setup-lets-encrypt--duckdns)
+- [Technologies Used](#technologies-used)
+- [Conclusion](#conclusion)
+
+---
+
+## Screenshot of Page
+
+![CareLink Landing Page](https://raw.githubusercontent.com/0seme/Cloud-project/main/joyce-landing-page.png)
 
 ---
 
@@ -48,9 +69,7 @@ ssh -i <key-name>.pem ubuntu@176.34.250.79
 
 Initially, Apache2 was running on the server from a previous configuration. Since I planned to use Nginx, I had to stop and disable Apache first.
 
-### Steps Taken
-
-**Stop and Disable Apache2**
+### Stop and Disable Apache2
 
 **Commands Run:**
 ```bash
@@ -58,7 +77,7 @@ sudo systemctl stop apache2
 sudo systemctl disable apache2
 ```
 
-**Install Nginx**
+### Install Nginx
 
 **Commands Run:**
 ```bash
@@ -66,7 +85,7 @@ sudo apt update
 sudo apt install nginx -y
 ```
 
-**Start and Enable Nginx**
+### Start and Enable Nginx
 
 **Commands Run:**
 ```bash
@@ -74,7 +93,7 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
 
-**Verify Nginx Installation**
+### Verify Nginx Installation
 
 Open in browser:
 ```
@@ -121,14 +140,14 @@ Since I did not own a custom domain, I used DuckDNS, a free dynamic DNS service,
    - **Full domain:** cloudbyjoyce.duckdns.org
    - Linked it to my EC2 instance's public IP
 
-**Install Certbot and Nginx Plugin**
+### Install Certbot and Nginx Plugin
 
 **Command Run:**
 ```bash
 sudo apt install certbot python3-certbot-nginx -y
 ```
 
-**Request SSL Certificate**
+### Request SSL Certificate
 
 **Command Run:**
 ```bash
@@ -137,7 +156,7 @@ sudo certbot --nginx -d cloudbyjoyce.duckdns.org
 
 Followed the interactive prompts, accepted the terms, and the SSL certificate was issued and automatically configured.
 
-**Verify HTTPS**
+### Verify HTTPS
 
 Visit in browser:
 ```
@@ -145,3 +164,16 @@ https://cloudbyjoyce.duckdns.org
 ```
 
 Certbot also scheduled automatic SSL renewal using a system timer.
+
+## Technologies Used
+
+- **AWS EC2** – Cloud compute instance
+- **Ubuntu 22.04** – Server operating system
+- **Nginx** – Web server
+- **DuckDNS** – Free dynamic DNS provider
+- **Let's Encrypt + Certbot** – For SSL certificates
+- **HTML5** – For landing page content
+
+## Conclusion
+
+This project demonstrates my ability to provision cloud resources, set up web servers, deploy applications, and secure web traffic using SSL, all of which i did with free-tier tools. Thank you to AltSchool for the hands-on learning opportunity and exposure to real-world DevOps practices.
